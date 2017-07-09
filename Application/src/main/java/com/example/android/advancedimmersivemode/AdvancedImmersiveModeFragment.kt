@@ -39,11 +39,11 @@ class AdvancedImmersiveModeFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setHasOptionsMenu(true)
     }
 
-    override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, state: Bundle?): View? {
-        val flagsView = inflater!!.inflate(R.layout.fragment_flags, container, false)
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, state: Bundle?): View? {
+        val flagsView = inflater.inflate(R.layout.fragment_flags, container, false)
+
         mLowProfileCheckBox = flagsView.findViewById(R.id.flag_enable_lowprof) as CheckBox
         mHideNavCheckbox = flagsView.findViewById(R.id.flag_hide_navbar) as CheckBox
         mHideStatusBarCheckBox = flagsView.findViewById(R.id.flag_hide_statbar) as CheckBox
